@@ -15,6 +15,17 @@ Write a function named min2 that takes two Int values, a and b, and returns the 
  > 1
 */
 
+func min2(_ a: Int, _ b: Int) -> Int {
+    var result: Int = 0
+    if (a < b) {
+        result = a
+    } else if (b < a) {
+        result = b
+    }
+    return result
+}
+
+print(min(1, 2))
 
 /*
 🕹 Last Digit
@@ -24,6 +35,11 @@ Write a function that takes an Int and returns it’s last digit. Name the funct
  > lastDigit(12345)                     Hint: % modulus operator
  > 5
  */
+func lastDigit(_ num: Int) -> Int {
+    return num % 10
+}
+
+print(lastDigit(1234))
 
 
 /*
@@ -35,6 +51,17 @@ Write a function named first that takes an Int named N and returns an array with
  > [1, 2, 3]
 */
 
+func first(_ N: Int) -> [Int] {
+    var values: [Int] = []
+    
+    for num in 1 ... N {
+        values.append(num)
+    }
+    return values
+}
+
+print(first(10))
+
 /*
 🕹 Reverse
 
@@ -44,6 +71,17 @@ Write a function named reverse that takes an array of integers named numbers as 
  > [3, 2, 1]
  */
 
+func reverse(nums: [Int]) -> [Int] {
+    var data: [Int] = []
+    var i = nums.count
+    while i > 0  {
+        data.append(nums[i-1])
+        i = i - 1
+    }
+    return data
+}
+
+print(reverse(nums: [1, 2, 3, 4, 5, 64, 32]))
 
 /*
 🕹 Sum
@@ -53,3 +91,13 @@ Write a function named sum that takes an array of integers and returns their sum
  > sum(of: [1, 2, 3])
  > 6
  */
+
+func sum(of nums: [Int]) -> Int {
+    var total = 0
+    for n in nums {
+        total = total + n
+    }
+    return total
+}
+
+print(sum(of: [1, 2, 3, 41]))
