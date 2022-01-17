@@ -83,6 +83,17 @@ func reverse(nums: [Int]) -> [Int] {
 
 print(reverse(nums: [1, 2, 3, 4, 5, 64, 32]))
 
+func rev(_ nums: [Int]) -> [Int] {
+    var data = [Int]()
+    for n in nums {
+        data.insert(n, at: 0)
+    }
+    return data
+    
+}
+
+print(rev([4, 5, 6]))
+
 /*
 🕹 Sum
 
